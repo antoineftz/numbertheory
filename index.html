@@ -10,15 +10,52 @@
      <pre>ELEMENTARY NUMBER THEORY AND ITS APPLICATIONS (3<sup>rd</sup> edition) by K.H ROSEN</pre>
     <pre>
       <code>
-        Chapter 1 - Programming project 1
-        
-        
-        Git test 2025
-        my code will be here...
-        
-      </code>
+1.1.1 Find the first n Ulam numbers where n is a positive integer.
+
+//Limit of the array
+let limit = 200;
+
+//Initialize array for Ulam numbers
+let arr = [];
+
+//Compute Ulam numbers
+function ulam() {
+    arr.push(1);
+    arr.push(2);
+
+    for (let i = 3; i < limit; i++) {
+        let count = 0;
+
+        for (let j = 0; j < arr.length - 1; j++) {
+            for (let k = j + 1; k < arr.length; k++) {
+                if (arr[j] + arr[k] == i) {
+                    count++;
+                }
+                if (count > 1) break;
+            }
+            if (count > 1) break;
+        }
+
+        if (count == 1) {
+            arr.push(i);
+        }
+    }
+}
+
+ulam();
+
+//Output the first n Ulam numbers
+function output(n) {
+    for (x = 0; x < n; x++) {
+        console.log(arr[x]);
+    }
+}
+
+// Output the first 5 Ulam numbers
+output(5);
+</code>
       <code>
-        Project 2 etc
+        
       </code>
     </pre>
 
