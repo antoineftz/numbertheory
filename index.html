@@ -12,13 +12,13 @@
       <code>
 1.1.1 Find the first n Ulam numbers where n is a positive integer.
 
-//Limit
+// Limit
 let limit = 13000;
 
-//Initialize array for Ulam numbers
+// Initialize array for Ulam numbers
 let arr = [];
 
-//Compute Ulam numbers
+// Compute Ulam numbers
 function ulam() {
     arr.push(1);
     arr.push(2);
@@ -44,18 +44,33 @@ function ulam() {
 
 ulam();
 
-//Compute the first n Ulam numbers
+// Compute the first n Ulam numbers
 function output(n) {
     for (x = 0; x < n; x++) {
         console.log(arr[x]);
     }
 }
 
-//Output the first 1000 Ulam numbers
+// Output the first 1000 Ulam numbers
 output(1000);
 </code>
       <code>
-        
+1.2.1 Find n! for a given nonnegative integer n.
+
+function fact(n) {
+ let p = 1;
+ if (n == 0) {
+ return p;
+ }
+    for (i = n; i >= 1; i--) {
+          p = p * i;
+          }
+          return p;
+          }
+
+// Output factorial 10
+console.log(fact(10));
+
       </code>
     </pre>
 
